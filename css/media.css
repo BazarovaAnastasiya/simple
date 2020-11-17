@@ -1,0 +1,112 @@
+@media (max-width: 1300px){
+  .main {
+    background-size: 50%;
+    padding: 0 50% 100px 0;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    margin-bottom: 38px;
+  }
+  .logo__text{
+    display: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    visibility: hidden;
+    padding: 150px 0;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height:100%;
+    z-index: 0;
+  }
+  .menu__link{
+    font: 500 30px/35px'Roboto', arial, helvetica,
+   sans-serif;
+   padding: 25px 0;
+  }
+  .span {
+    display: block;
+    position: relative;
+    content: '';
+    width: 25px;
+    height: 3px;
+    background: #0056EC;
+    z-index: 1;
+  }
+  .span::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    content: '';
+    width: 25px;
+    height: 3px;
+    background: #0056EC;
+  }
+  .span::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    content: '';
+    width: 25px;
+    height: 3px;
+    background: #0056EC;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+  transition: transform .5s ease-in-out;
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+  transition: transform .5s ease-in-out;
+  }
+  #menu__toggle:checked ~.menu  {
+  visibility: visible;
+  animation: move 1s ease-in-out;
+  }
+  .main {
+    padding: 80% 0 0 0;
+    background: top center no-repeat url(../img/bg.png);
+    background-size: contain;
+    text-align: center;
+  }
+  .main__title{
+    font: bold 30px/40px 'pt_serifbold',  arial, helvetica, sans-serif;
+    margin: 32px 0;
+  }
+  .main__subtitle {
+    font: 500 16px/18px 'Roboto', arial, helvetica, sans-serif;
+    padding-right: 10px;
+    margin: 0 0 41px 0;
+  }
+  .main__button {
+    font: 500 14px/16px 'Roboto', arial, helvetica, sans-serif;
+    padding: 16px 14px;
+  }
+}
+@keyframes move {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@media (max-width: 470px) {
+  .header {
+    margin-bottom: 5px;
+  }
+
+  .main__title{
+    font: bold 22px/30px 'pt_serifbold',  arial, helvetica, sans-serif;
+    margin: 15px 0;
+  }
